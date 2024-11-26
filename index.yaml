@@ -3,6 +3,16 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-26T13:23:45.13782871Z"
+    description: A Helm chart for Kubernetes
+    digest: 42d2baa98891a57521ecb3af7c29fb3186920143930ebdab086f3d8b7a243a4d
+    name: test
+    type: application
+    urls:
+    - https://github.com/lipusik/helm-charts2/releases/download/test-0.1.6/test-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-19T08:09:08.682110778Z"
     description: A Helm chart for Kubernetes
     digest: 8cea0167faa40d1a12264d098d94c19ac2da3188af998d44a2d6fc60dc96831f
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/lipusik/helm-charts2/releases/download/test-0.1.5/test-0.1.5.tgz
     version: 0.1.5
-generated: "2024-11-19T08:09:08.682116729Z"
+generated: "2024-11-26T13:23:45.137876429Z"
