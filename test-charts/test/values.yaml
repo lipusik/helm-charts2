@@ -36,3 +36,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+configmapData:
+  TEST: 123
+
+volumes: []
+  # - name: foo
+  #   secret:
+  #     secretName: mysecret
+  #     optional: false

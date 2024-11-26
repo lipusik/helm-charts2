@@ -32,6 +32,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      {{- if .Values.configmapData }}
+          volumeMounts:
+          - mountPath: /usr/src/app/dependency_injection.yml
+            name: {{ include "test.fullname" . }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -43,4 +48,12 @@ spec:
       {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- if .Values.configmapData }}
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          name: {{ include "test.fullname" . }}
+        name: {{ include "test.fullname" . }}
       {{- end }}
