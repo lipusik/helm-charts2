@@ -38,7 +38,7 @@ tolerations: []
 affinity: {}
 
 configmapData:
-  TEST: 123
+  TEST: "123"
 
 volumes: []
   # - name: foo
